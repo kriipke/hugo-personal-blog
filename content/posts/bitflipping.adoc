@@ -1,0 +1,9 @@
++++
+title = "bitflipping attacks on DNS resolution: an overview"
+date = "2020-08-03"
+tags = ['attack vector']
++++
+
+Bitflipping attacks on URLs are of particular interest to me because they have the fascinating quality of being largely "random". In other words, bitflipping attacks do not result from unpatched software or misconfigured settings, but rather are a natural consequence of computers operating perfectly normally otherwise. For this reason, they pose a serious risk to organizations whose security posture is otherwise exceptional.
+<!--more-->
+

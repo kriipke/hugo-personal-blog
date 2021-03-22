@@ -1,0 +1,14 @@
+{{ define "page-header" }}
+<h1>{{ .Title }}</h1>
+<div class="header-spacer"></div>
+{{ end }}
+
+{{ define "main" }}
+<br>
+{{ .Content }}
+{{ partial "certifications.html" . }}
+{{ end }}
+
+{{ define "sidebar" }}
+{{ partial "contact.html" }}
+{{ end }}

@@ -1,0 +1,46 @@
+---
+title: provii
+github: l0xy/provii
+description: in-memory downloader for binary command-line utilities
+tags:
+- 'sh'
+- 'cli'
+- 'shell'
+---
+
+= provii
+
+`provii` is a bash script tool to painlessly download your favorite command-line utilities on a machine that that may be missing them. The script itself is hosted at http://l0xy.sh/provii. The script itself primarily accesses installion scripts that are hosted at provii's github repository: https://github.com/l0xy/provii/tree/master/installs.
+
+== usage
+
+The easiest way to use provii is to curl the script and pipe it directly into bash:
+
+[source,console]
+~$ bash -c "$( curl l0xy.sh/provii.sh )" application_name
+
+For example, to download the tool `fd` (an alternative to the `find` tool written in Rust), you would run:
+
+[source,console]
+~$ bash -c "$( curl l0xy.sh/provii.sh )" fd
+
+which would fetch and run the instructions on how to install `fd` from the provii Github repository.
+
+However, the beauty of provii is that you don't really need to know anything about that script or how it works; it all goes on behind the scenes. All you will see is:
+
+
+[source,console]
+----
+~$ bash -c "$( curl l0xy.sh/provii.sh )" fd
+binary: fd
+destination: /home/user/.local/bin/
+
+/fd-v8.1.1-x86_64-unknown-linux-musl.tar.gz
+########################################################## 100.0%
+----
+
+The best part about `provii` is that after the installation of a program such as `fd` _the only files left on your machine will be the ones you requested_, e.g. the binary of `fd`. There will be no trace of `provii` itself or any intermediary files used during the installation!
+
+== how it works
+
+The `provii.sh` script works by gathering information about about directories that are relevant to the installation, such as a `bin` and `man` directory that are appropriate for the user running the installer. Next, provii creates a bash subshell with a clean environment and populates that environment with varaibles that will be used while running the installation script for the chosen software.

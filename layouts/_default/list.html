@@ -1,0 +1,26 @@
+{{ define "page-header" }}
+<h1>{{ .Page.Title | lower }}</h1>
+{{ .Content }}
+<div class="header-spacer"></div>
+{{ end }}
+
+
+{{ define "main" }}
+<div class="posts-list">
+	{{ range sort .Data.Pages "Date" "desc" }}
+	{{ if not .Params.private }}
+	<div class="date">{{ .PublishDate.Format "Jan. 2, 2006" }}</div>    
+	<div class="post-spacer"></div>
+	<div class="post-info">
+		<h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
+		{{ .Summary }}
+	</div>
+	{{ end }}
+	{{ end }}
+</div>
+{{ end }}
+
+
+{{ define "sidebar" }}
+{{ partial "tags/local/block.html" . }}
+{{ end }}

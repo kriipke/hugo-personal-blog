@@ -1,0 +1,20 @@
+---
+title: shell functions
+github: l0xy/shell-functions
+description: shell functions to aide in everyday tasks
+tags:
+- 'sh'
+- 'shell'
+- 'cli'
+---
+
+= shell functions
+
+This repository contains various shell functions broken into files organized by topic.
+
+link:https://github.com/l0xy/shell-functions/blob/master/cryptography.sh[cryptography.sh] :: functions for encrypting and decrypting files
+link:https://github.com/l0xy/shell-functions/blob/master/explain.sh[ explain.sh ] :: a shell function that takes a command and a switch for that command as arguments and prints out the relevant section of the commands man page for that switch
+link:https://github.com/l0xy/shell-functions/blob/master/files.sh[ files.sh ] :: functions for working with and modifying filenames and file properties
+link:https://github.com/l0xy/shell-functions/blob/master/keyboard.sh[ keyboard.sh ] :: functions for configuring keyboard functionality under X
+link:https://github.com/l0xy/shell-functions/blob/master/statusbar.sh[ statusbar.sh ] :: functions that generate useful information one might want to add to a window manager's statusbar
+link:https://github.com/l0xy/shell-functions/blob/master/upload.sh[ upload.sh ] :: functions for uploading files and text to the internet from the command line for the purpose of sharing with others

@@ -1,0 +1,22 @@
+<div id="site-nav">
+<nav class="terminal-menu">
+
+  <div class="row-menu">
+    <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+        {{ range .Site.Params.navlinks }}
+        <li><a href="{{ absURL .url }}" typeof="ListItem">{{ .name }}</a></li>
+        {{ end }}
+    </ul>
+  </div>
+
+  <div class="dropdown-menu">
+    <button class="dropdown-button">menu/</button>
+    <div class="dropdown-content">
+      {{ range $index, $link := .Site.Params.navlinks }}
+      <a class="dropdown-item dropdown-item-{{ $index }}" href="{{ absURL $link.url }}">{{ $link.name }}</a>
+      {{ end }}
+    </div>
+  </div>
+
+</nav>
+</div>

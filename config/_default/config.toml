@@ -1,0 +1,5 @@
+baseurl = "https://spencersmolen.io/"
+title = "spencer.smolen"
+staticDir = [ "static" ]
+languageCode = "en-us"
+ignoreFiles = [ "^tags$", "\\.bak$", "\\.sh$" ]

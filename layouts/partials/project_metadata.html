@@ -1,0 +1,9 @@
+<div class="project-metadata">
+    {{ partial "tags/page/inline.html" . }}
+    {{ if .Params.github }}
+    <a class="github" href="https://github.com/{{ .Params.github }}">
+        <img class="icon" src="/image/icon/logo/github.svg" alt="">
+        {{ .Params.github }}
+    </a>
+    {{ end }}
+</div>

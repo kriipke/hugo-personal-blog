@@ -1,0 +1,21 @@
+<div>
+  <nav class="tags-nav">
+
+    <ul>
+    {{ $type := .Type }}
+	{{ range $key, $value := .Site.Taxonomies.tags }}
+
+      {{ $pages := where $value.Pages "Type" $type }}
+	  {{ if ( gt $pages 0 )}}
+      <li>
+        <a href="{{ .Page.Permalink }}">
+        #{{$key}} <span class="counter">{{ (replace $pages "Pages" "" )  }}</span>
+        </a>
+      </li>
+      {{ end }}
+
+	{{ end }}
+    </ul>
+
+  </nav>
+</div>

@@ -1,0 +1,15 @@
++++
+title = "shell environment as an attack vector"
+date = "2020-08-03"
+tags = ['attack vector','shell']
++++
+
+In Linux, the shell provides the user with an environment which they can manipulate to achieve a better workflow. Even in restricted environments, this includes things like:
+
+ * creating and manipulating user shell variables
+ * defining functions
+ * creating aliases
+
+
+
+<!--more-->

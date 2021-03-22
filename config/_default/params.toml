@@ -1,0 +1,11 @@
+titleCutting = true
+
+[[navlinks]]
+name = "about/"
+url = "about/"
+[[navlinks]]
+name = "posts/"
+url = "posts/"
+[[navlinks]]
+name = "code/"
+url = "code/"

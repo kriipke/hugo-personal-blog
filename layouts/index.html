@@ -1,0 +1,25 @@
+{{ define "page-header" }}
+<h1>latest posts</h1><br>
+{{ end }}
+
+{{ define "main" }}
+<div class="posts-list">
+    {{ with .Site.GetPage "/posts" }}
+    {{ range (sort .Data.Pages "Date" "desc" (where .Pages ".Params.private" "!=" true))}}
+    <div class="date">{{ .PublishDate.Format "Jan. 2, 2006" }}</div>    
+	<div class="post-spacer"></div>
+    <div class="post-info">
+        <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
+        {{ .Summary }}
+    </div>
+    {{ end }}
+    {{ end }}
+</div>
+{{ end }}
+
+
+{{ define "sidebar" }}
+{{ with .GetPage "/posts" }}
+{{ partial "tags/local/block.html" . }}
+{{ end }}
+{{ end }}

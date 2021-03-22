@@ -1,0 +1,30 @@
+{{ define "page-header" }}
+<h1>{{ .Title | lower }}</h1>
+<div class="header-spacer"></div>
+{{ end }}
+
+
+{{ define "main" }}
+<ul>
+	{{ range .Data.Terms.Alphabetical }}
+	<h2>#{{ .Name }}</h2>
+		<ul class="icon-as-bullet">
+			{{ range .Pages }}
+			<li class="icon-as-bullet">
+				<a href="{{.Permalink}}">
+					<img class="file-icon" src="/image/icon/file/{{ .Type }}.svg" onerror="this.src='/image/icon/file/page.svg'"/>
+					{{.LinkTitle}}
+				</a>
+			</li>
+			{{ end }}
+		</ul>
+	</li>
+	{{ end }}
+</ul>
+{{ end }}
+
+
+{{ define "sidebar" }}
+{{ partial "tags/global/block.html" . }}
+{{ end }}
+

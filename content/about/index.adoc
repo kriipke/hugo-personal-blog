@@ -1,0 +1,10 @@
+---
+title: "about"
+type: about
+---
+
+I'm a security researcher based out of ATL. My interests include:
+
+ - all things Linux
+ - networking protocols / philosphy of information
+ - DevOps & system building

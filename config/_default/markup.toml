@@ -1,0 +1,6 @@
+
+[asciidoctorext]
+  extensions = ["asciidoctor-html5s", "asciidoctor-rouge", "asciidoctor-diagram"]
+  workingFolderCurrent = true
+[asciidocext.attributes]
+  source-highlighter = "rouge"

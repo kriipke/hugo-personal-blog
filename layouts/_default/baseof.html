@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    {{- partial "head/meta.html" . -}}
+    {{- partial "head/title.html" . -}}
+    {{- partial "head/css.html" . -}}
+    {{- partial "head/favicon.html" . -}}
+    {{- partial "head/html5shiv.html" . -}}
+    {{- partial "head/output_formats.html" . -}}
+    {{- partial "head/opengraph.html" . -}}
+    {{- partial "head/twitter_cards.html" . -}}
+    {{ template "_internal/google_analytics.html" . }}
+</head>
+
+<body class="terminal">
+    <div class="container">
+        <div id="site-logo">
+        {{ partial "grid/logo.html" . }}
+        </div>
+
+        <div id="site-nav">
+        {{ partial "grid/nav.html" . }}
+        </div>
+
+        <div id="page-header">
+        {{ block "page-header" . }}
+        {{ end }}
+        </div>
+
+        <div id="content">
+        {{ block "main" . }}
+        {{ end }}
+        </div>
+
+        <div id="sidebar">
+        {{ block "sidebar" . }}
+        {{ end }}
+        </div>
+
+        <div id="footer" class="footer">
+        {{ partial "grid/footer.html" . }}
+        </div>
+
+    </div>
+</body>
+</html>

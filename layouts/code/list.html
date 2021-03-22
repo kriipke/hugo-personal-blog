@@ -1,0 +1,26 @@
+{{ define "page-header" }}
+<h1>{{ .Page.Title }}</h1>
+{{ .Content }}
+<div class="header-spacer"></div>
+{{ end }}
+
+
+{{ define "main" }}
+<div class="projects-list">
+	{{ range sort .Data.Pages "Date" "desc" }}
+	{{ if not .Params.private }}
+	<div class="project-name">
+		<a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+	</div>
+	<div class="project-description">{{ .Description }}</div>
+	<div class="project-spacer"></div>
+	{{ end }}
+	{{ end }}
+</div>
+{{ end }}
+
+
+{{ define "sidebar" }}
+{{ partial "tags/local/block.html" . }}
+{{ end }}
+
