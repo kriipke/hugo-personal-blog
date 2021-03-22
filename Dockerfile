@@ -32,7 +32,7 @@ COPY --from=0 /usr/bin/hugo /usr/bin
 RUN set -eux && \
     case ${HUGO} in \
       *_extended) \
-        apk add --update --no-cache libc6-compat libstdc++ asciidoctor && \
+        apk add --update --no-cache libc6-compat libstdc++ asciidoctor ruby-bundler && \
         gem install rouge asciidoctor-rouge asciidoctor-interdoc-reftext asciidoctor-diagram asciidoctor-html5s && \
         rm -rf /usr/lib/ruby/gems/*/cache/* && \
         rm -rf /var/cache/apk/* ;; \
