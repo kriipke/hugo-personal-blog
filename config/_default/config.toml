@@ -1,4 +1,4 @@
-baseurl = "https://spencersmolen.io/"
+baseurl = "https://spencersmolen.com/"
 title = "spencer.smolen"
 staticDir = [ "static" ]
 languageCode = "en-us"
