@@ -24,7 +24,7 @@ def compare_versions(version1, version2):
 if len(sys.argv) != 3:
     print('Usage: update.py API_token project_uri')
     exit(1)
-
+https://github.com/gohugoio/hugo/releases/download/v0.101.0/hugo_extended_0.101.0_Linux-64bit.tar.gz
 # Get vars from script arguments
 GITLAB_TOKEN = sys.argv[1]
 GITLAB_PROJECT = quote(sys.argv[2], safe='')
