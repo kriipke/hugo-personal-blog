@@ -1,5 +1,5 @@
-baseurl = "https://spencersmolen.com/"
-title = "spencer.smolen"
-staticDir = [ "static" ]
+baseurl = "/"
+ignoreFiles = ["^tags$", "\\.bak$", "\\.sh$"]
 languageCode = "en-us"
-ignoreFiles = [ "^tags$", "\\.bak$", "\\.sh$" ]
+staticDir = ["static"]
+title = "spencer.smolen"

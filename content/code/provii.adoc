@@ -1,6 +1,6 @@
 ---
 title: provii
-github: l0xy/provii
+github: kriipke/provii
 description: in-memory downloader for binary command-line utilities
 tags:
 - 'sh'
@@ -10,19 +10,19 @@ tags:
 
 = provii
 
-`provii` is a bash script tool to painlessly download your favorite command-line utilities on a machine that that may be missing them. The script itself is hosted at http://l0xy.sh/provii. The script itself primarily accesses installion scripts that are hosted at provii's github repository: https://github.com/l0xy/provii/tree/master/installs.
+`provii` is a bash script tool to painlessly download your favorite command-line utilities on a machine that that may be missing them. The script itself is hosted at http://kriipke.io/provii. The script itself primarily accesses installion scripts that are hosted at provii's github repository: https://github.com/kriipke/provii/tree/master/installs.
 
 == usage
 
 The easiest way to use provii is to curl the script and pipe it directly into bash:
 
 [source,console]
-~$ bash -c "$( curl l0xy.sh/provii.sh )" application_name
+~$ bash -c "$( curl kriipke.io/provii.sh )" application_name
 
 For example, to download the tool `fd` (an alternative to the `find` tool written in Rust), you would run:
 
 [source,console]
-~$ bash -c "$( curl l0xy.sh/provii.sh )" fd
+~$ bash -c "$( curl kriipke.io/provii.sh )" fd
 
 which would fetch and run the instructions on how to install `fd` from the provii Github repository.
 
@@ -31,7 +31,7 @@ However, the beauty of provii is that you don't really need to know anything abo
 
 [source,console]
 ----
-~$ bash -c "$( curl l0xy.sh/provii.sh )" fd
+~$ bash -c "$( curl kriipke.io/provii.sh )" fd
 binary: fd
 destination: /home/user/.local/bin/
 
