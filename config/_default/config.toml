@@ -3,3 +3,7 @@ ignoreFiles = ["^tags$", "\\.bak$", "\\.sh$"]
 languageCode = "en-us"
 staticDir = ["static"]
 title = "spencer.smolen"
+
+[security.exec]
+allow = ["^dart-sass-embedded$", "^go$", "^npx$", "^postcss$", "^asciidoctor$","^asciidoctorj$" ]
+osEnv = ["(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM|RUBYLIB)$"]
